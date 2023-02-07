@@ -6,4 +6,5 @@ The following project was created for the Introduction to Cybersecurity course a
 3. Injection 
 4. CSRF Attacks 
 5. Security Logging and Monitoring Failures 
+
 In order to run the application, simply clone the repository and run using "python manage.py runserver" in the proper directory.
