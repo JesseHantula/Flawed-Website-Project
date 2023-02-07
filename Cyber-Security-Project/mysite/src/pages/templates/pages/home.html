@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+  <h1>To-Do Lists</h1>
+  <ul>
+    {% for list in lists %}
+      <li><a href="{% url 'view_list' list.id %}verify_password">{{ list.name }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'create_list' %}">Create a new list</a>

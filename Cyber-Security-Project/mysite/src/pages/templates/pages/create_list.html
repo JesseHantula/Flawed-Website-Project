@@ -1,0 +1,9 @@
+
+{% block content %}
+<h1>Create a new list</h1>
+<form method="post" action="{% url 'create_list' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>
+{% endblock %}

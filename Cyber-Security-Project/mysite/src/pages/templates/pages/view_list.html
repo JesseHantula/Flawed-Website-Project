@@ -1,0 +1,27 @@
+
+
+{% block content %}
+  <h1>{{ list.name }}'s to-do list</h1>
+  <ul>
+    {% for item in items %}
+      <li>
+        {{ item.text }}
+        {% if not item.completed %}
+          <a href="{% url 'complete_item' item.id %}">Mark as complete</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  <h2>Add a new item</h2>
+  <form method="post" action="{% url 'create_item' list.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+  <h3>Delete this list (action can not be reversed)</h3>
+  <form method="post" action="{% url 'delete_list' list.id %}">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+  <a href="{% url 'home' %}">Home</a>
+{% endblock %}
