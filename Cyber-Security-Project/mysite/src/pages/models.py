@@ -4,8 +4,6 @@ from django.core.exceptions import ValidationError
 class List(models.Model):
 	name = models.CharField(max_length=200)
 	password = models.CharField(max_length=200)
-	#for flaw 2, we add a field to check if the list has been verified
-	verified = models.BooleanField(default=False)
 
 	#to fix flaw 1, add this function to check that the password is strong enough
 	"""
