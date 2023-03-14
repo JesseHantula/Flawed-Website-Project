@@ -21,13 +21,7 @@ logger = logging.getLogger(__name__)
 @csrf_protect
 '''
 def home(request):
-    lists = List.objects.all()
-    #for flaw 2, we set the verified field to false for all lists to reset the password verification
-    """
-    for list in lists:
-        list.verified = False
-        list.save()
-    """
+    lists = List.objects.all()   
     return render(request, 'pages/home.html', {'lists': lists})
 
 #we add the csrf_protect decorator to protect against cross-site request forgery (flaw 4)
@@ -56,11 +50,11 @@ def verify_password(request, list_id):
     if request.method == 'POST':
         password = request.POST['password']
         if password == list.password:
-            #to fix flaw 2, we set the verified field to true
+            #to fix flaw 2, we create a session variable to store the password verification specific to the list id
             '''
-            list.verified = True
-            list.save()
+            request.session['list_verified_%d' % list_id] = True
             '''
+            
             return redirect('view_list', list_id)
         else:
             #log the error to the console (flaw 5)
