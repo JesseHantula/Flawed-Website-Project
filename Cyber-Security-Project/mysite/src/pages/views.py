@@ -80,7 +80,7 @@ def view_list(request, list_id):
     items = Item.objects.filter(list=list) 
     #we then check to see if the password has been verified, if it hasn't, we redirect to the verify password page (flaw 2)
     '''
-    if list.verified == False:
+    if not request.session.get('list_verified_%d' % list_id):
         return redirect('verify_password', list_id)
     '''
       
