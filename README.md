@@ -27,4 +27,4 @@ There are two ready-made accounts that can be used, with the following credentia
 * User: bob Password: squarepants
 
 The code is documented in order to showcase the security flaws. You can also read the report I made that explains the flaws and application in more details:
-[report.pdf](Report)
+[Report](report.pdf)
