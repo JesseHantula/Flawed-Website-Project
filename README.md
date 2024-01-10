@@ -10,7 +10,9 @@ Provides 5 examples of security flaws and shows fixes for each of them. The 5 vu
 5. Security Logging and Monitoring Failures
 
 In order to run the application, simply clone the repository and navigate to the manage.py file. Once there, run the following commands:
+
 `python manage.py makemigrations`
+
 `python manage.py migrate`
 
 This initializes the SQL database. Once these commands have been run, the server can be started by running:
