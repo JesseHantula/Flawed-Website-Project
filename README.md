@@ -16,6 +16,7 @@ In order to run the application, simply clone the repository and navigate to the
 `python manage.py migrate`
 
 This initializes the SQL database. Once these commands have been run, the server can be started by running:
+
 `python manage.py runserver`
 
 The web server can be found with the following URL:
