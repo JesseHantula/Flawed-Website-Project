@@ -23,7 +23,7 @@ The web server can be found with the following URL:
 [localhost:8000](localhost:8000)
 
 There are two ready-made accounts that can be used, with the following credentials:
-User: alice Password: redqueen
-User: bob Password: squarepants
+* User: alice Password: redqueen
+* User: bob Password: squarepants
 
 The code is documented in order to showcase the security flaws. You can also read the report I made that explains the flaws and application in more details:
